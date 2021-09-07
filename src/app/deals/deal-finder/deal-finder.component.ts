@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IProduct } from '../../shared/models/product.model';
+import { IProduct } from '../../products/product.model';
 
 @Component({
   selector: 'app-deal-finder',

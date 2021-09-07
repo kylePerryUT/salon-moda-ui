@@ -1,7 +1,6 @@
-<h2>Put Universal Site Header Here</h2>
-<h1>{{title}}</h1>
-<nav>
-  <a routerLink="/deal-finder">Deal Finder</a>
-</nav>
+<mat-toolbar>
+  <button mat-button (click)=toHome()>Home</button>
+  <button mat-button (click)=toDealFinder()>Deal Finder</button>
+  <button mat-button (click)=toProducts()>Products</button>
+</mat-toolbar>
 <router-outlet></router-outlet>
-<h2>Put Universal Site Footer Here</h2>

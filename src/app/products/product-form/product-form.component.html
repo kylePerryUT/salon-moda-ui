@@ -1,0 +1,35 @@
+<div class="container">
+    <h2>Add Product</h2>
+    <form>
+        <div class="form-group">
+            <label for="name">Product Name</label>
+            <input id="name" name="name" class="form-control" ngModel/>
+        </div>
+        <div class="form-check form-group">
+            <input class="form-check-input" type="checkbox" id="active" ngModel> 
+            <label class="form-check-label" for="active">
+                Active
+            </label>           
+        </div>
+        <label>Store</label>
+        <div class="form-group" id="storeSelector">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="storeSelectors" id="SalonCentric" ngModel>
+                <label class="form-check-label" for="SalonCentric">Salon Centric</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="storeSelectors" id="SalonServices" ngModel>
+                <label class="form-check-label" for="SalonServices">Salon Services</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="productLine">Product Line</label>
+            <select class="form-control" id="productLine" name="productLine" ngModel>
+                <option>L'Oreal</option>
+                <option>Redken</option>
+                <option>Kevin Murphy</option>
+            </select>
+        </div>
+        <button class="btn btn-primary">Add</button>
+    </form> 
+</div>

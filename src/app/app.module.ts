@@ -3,9 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { DealFinderModule } from './deals/deals.module'; 
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http'
+import { ProductsModule } from './products/products.module';
+import { DealsModule } from './deals/deals.module';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { HomePageModule } from './home-page/home-page.module';
 
 const routes: Routes = [
   { path: '404', component: PageNotFoundComponent},
@@ -21,8 +25,12 @@ const routes: Routes = [
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    DealFinderModule,
     RouterModule.forRoot(routes),
+    ProductsModule,
+    MatToolbarModule,
+    MatButtonModule,
+    DealsModule,
+    HomePageModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

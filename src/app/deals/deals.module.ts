@@ -25,4 +25,4 @@ const routes: Routes = [
     SharedModule
   ]
 })
-export class DealFinderModule { }
+export class DealsModule { }
