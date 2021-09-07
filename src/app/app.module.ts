@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { DealFinderModule } from './deals/deals.module'; 
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http'
 
 const routes: Routes = [
   { path: '404', component: PageNotFoundComponent},
@@ -19,7 +19,7 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    FormsModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     DealFinderModule,
     RouterModule.forRoot(routes),
