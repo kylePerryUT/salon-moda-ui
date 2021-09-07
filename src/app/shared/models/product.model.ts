@@ -1,6 +1,7 @@
 import { MonoTypeOperatorFunction } from "rxjs";
 
-export interface Product{
+export interface IProduct{
+    id: number
     brand: string,
     name: string,
     size: string

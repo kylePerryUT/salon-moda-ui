@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from '../shared/models/product.model';
+import { IProduct } from '../shared/models/product.model';
 
 @Component({
   selector: 'app-deal-finder',
@@ -8,14 +8,16 @@ import { Product } from '../shared/models/product.model';
 })
 
 export class DealFinderComponent implements OnInit {
-  Products: Product[] = [
+  Products: IProduct[] = [
     {
+      id: 1,
       brand: 'Loreal',
       name: 'Metal Detox Shampoo',
       size: '16oz',
       fullPrice: 29.99
     },
     {
+      id: 2,
       brand: 'Loreal',
       name: 'Metal Detox Masque',
       size: '16oz',

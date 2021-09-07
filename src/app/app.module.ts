@@ -6,11 +6,16 @@ import { DealFinderComponent } from './deal-finder/deal-finder.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
 import { FormsModule } from '@angular/forms';
+import { DealDetailComponent } from './deal-detail/deal-detail.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { DealFinderModule } from './deal-finder/deal-finder.module'; 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DealFinderComponent
+    DealFinderComponent,
+    DealDetailComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -18,6 +23,7 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatTableModule,
+    DealFinderModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
