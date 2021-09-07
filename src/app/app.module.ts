@@ -1,29 +1,28 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing/app-routing.module';
 import { AppComponent } from './app.component';
-import { DealFinderComponent } from './deal-finder/deal-finder.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatTableModule } from '@angular/material/table';
 import { FormsModule } from '@angular/forms';
-import { DealDetailComponent } from './deal-detail/deal-detail.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { DealFinderModule } from './deal-finder/deal-finder.module'; 
+import { DealFinderModule } from './deals/deals.module'; 
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+  { path: '404', component: PageNotFoundComponent},
+  { path: '**', component: PageNotFoundComponent}
+]
 
 @NgModule({
   declarations: [
     AppComponent,
-    DealFinderComponent,
-    DealDetailComponent,
     PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
-    MatTableModule,
     DealFinderModule,
+    RouterModule.forRoot(routes),
   ],
   providers: [],
   bootstrap: [AppComponent]
